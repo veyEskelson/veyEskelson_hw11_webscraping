@@ -10,7 +10,7 @@ mongo = PyMongo(app)
 # Create connection variable
 #conn = 'mongodb://localhost:5000'
 # Use PyMongo to establish Mongo connection
-app.config["MONGO_URI"] = "mongodb://localhost:5000/cscrape_mars_app"
+app.config["MONGO_URI"] = "mongodb://localhost:50321/scrape_mars_app"
 
 # Pass connection to the pymongo instance.
 #client = pymongo.MongoClient(conn)
@@ -32,7 +32,7 @@ def scrape():
             mars_results,
             upsert=True
     )
-    return redirect("http://localhost:5000/", code=302)
+    return redirect("http://localhost:50321/", code=302)
 
 if __name__ == "__main__":
     app.run(debug=True)

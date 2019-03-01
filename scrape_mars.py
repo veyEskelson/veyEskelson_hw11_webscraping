@@ -8,7 +8,7 @@ from splinter import Browser
 import pymongo
 
 # setup mongo connection
-conn = "mongodb://localhost:27017"
+conn = "mongodb://localhost:50321"
 client = pymongo.MongoClient(conn)
 db = client.srcape_mars_app
 collection = db.mars_results
